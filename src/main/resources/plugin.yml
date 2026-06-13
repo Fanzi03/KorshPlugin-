@@ -1,0 +1,18 @@
+main: com.korsh.KorshPlugin
+version: 1.0.0-SNAPSHOT
+name: KorshPlugin
+author: fanzi03
+api-version: 1.21.11
+commands: 
+  calculate: 
+    usage: /calculate <number> <operation> <number>
+    description: Calculation
+    aliases:
+      - calc
+  coordinates: 
+    usage: /coordinates
+    description: Get the player coordinates
+    aliases:
+      - coords
+      - cds
+  
