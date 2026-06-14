@@ -12,6 +12,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.korsh.commands.CalculateCommand;
 import com.korsh.commands.CoordinateCommand;
 import com.korsh.commands.ProjectCommand;
+import com.korsh.commands.TextModCommand;
 import com.korsh.listeners.PlayerListener;
 import com.korsh.managers.PluginManager;
 
@@ -31,7 +32,8 @@ public class KorshPlugin extends JavaPlugin {
         //Registration
         registerCommand("calculate", new CalculateCommand());
         registerCommand("coordinates", new CoordinateCommand(), null);
-        registerCommand("comp", new ProjectCommand(), null);
+        registerCommand("project", new ProjectCommand(), null);
+        registerCommand("text_mod", new TextModCommand(), null);
     }
 
     @Override
