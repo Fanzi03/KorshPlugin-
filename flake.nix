@@ -25,6 +25,7 @@
         default = pkgs.mkShell {
           packages = with pkgs; [
 		openjdk21
+    gradle
 		lsof
 		kotlin
           ];
@@ -32,6 +33,11 @@
             pkgs.stdenv.cc.cc.lib
             pkgs.libz
           ];
+          
+          shellHook = ''
+            alias l_server="./gradlew build && cd server &&  java -Xms4G -Xmx4G -jar paper-1.21.11.jar --nogui && cd .."
+            alias k_server="kill -9 $(lsof -t -i:25565)"
+          '';
         };
       });
     };

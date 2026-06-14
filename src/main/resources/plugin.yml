@@ -15,4 +15,7 @@ commands:
     aliases:
       - coords
       - cds
+  project:
+    description: Components
+    usage: /project 
   

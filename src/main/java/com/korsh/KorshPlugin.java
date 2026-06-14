@@ -5,24 +5,15 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import org.bukkit.World;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.TabCompleter;
-import org.bukkit.entity.Player;
-import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.korsh.commands.CalculateCommand;
 import com.korsh.commands.CoordinateCommand;
+import com.korsh.commands.ProjectCommand;
 import com.korsh.listeners.PlayerListener;
 import com.korsh.managers.PluginManager;
-import com.mojang.brigadier.Command;
-import com.mojang.brigadier.tree.LiteralCommandNode;
-
-import io.papermc.paper.command.brigadier.CommandSourceStack;
-import io.papermc.paper.command.brigadier.Commands;
-import io.papermc.paper.command.brigadier.argument.ArgumentTypes;
-import net.kyori.adventure.text.minimessage.tag.resolver.Placeholder;
 
 public class KorshPlugin extends JavaPlugin {
     
@@ -40,6 +31,7 @@ public class KorshPlugin extends JavaPlugin {
         //Registration
         registerCommand("calculate", new CalculateCommand());
         registerCommand("coordinates", new CoordinateCommand(), null);
+        registerCommand("comp", new ProjectCommand(), null);
     }
 
     @Override
