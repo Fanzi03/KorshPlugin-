@@ -54,7 +54,7 @@ public class PlayerListener implements Listener {
         
         Long countBlocks = breakBlocksCounts.get(playerUuid);
 
-        if (countBlocks % 1 == 0){
+        if (countBlocks % 100 == 0){
             event.getPlayer().sendMessage("Ты сломал " + countBlocks + " блоков");
         }
     }

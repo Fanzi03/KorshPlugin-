@@ -23,6 +23,12 @@ commands:
     usage: /text_mod text
     aliases:
       - tm
+  kit: 
+    description: Getting the default kit
+    usage: /kit
+  check_item:
+    description: checking the hidden info
+    usage: /check_item
     
 
   

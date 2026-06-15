@@ -10,7 +10,9 @@ import org.bukkit.command.TabCompleter;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.korsh.commands.CalculateCommand;
+import com.korsh.commands.CheckItemCommand;
 import com.korsh.commands.CoordinateCommand;
+import com.korsh.commands.DefaultKitCommand;
 import com.korsh.commands.ProjectCommand;
 import com.korsh.commands.TextModCommand;
 import com.korsh.listeners.PlayerListener;
@@ -31,6 +33,8 @@ public class KorshPlugin extends JavaPlugin {
         registerCommand("coordinates", new CoordinateCommand(), null);
         registerCommand("project", new ProjectCommand(), null);
         registerCommand("text_mod", new TextModCommand(), null);
+        registerCommand("kit", new DefaultKitCommand(this), null);
+        registerCommand("check_item", new CheckItemCommand(this), null);
 
         // Register listeners
         getServer().getPluginManager().registerEvents(new PlayerListener(), this);
