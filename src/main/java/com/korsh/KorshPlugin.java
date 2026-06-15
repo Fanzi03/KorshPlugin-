@@ -24,9 +24,6 @@ public class KorshPlugin extends JavaPlugin {
         // Initialize managers
         PluginManager.getInstance().initialize();
         
-        // Register listeners
-        getServer().getPluginManager().registerEvents(new PlayerListener(), this);
-        
         getLogger().warning("KorshPlugin has been enabled!");
 
         //Registration
@@ -34,6 +31,9 @@ public class KorshPlugin extends JavaPlugin {
         registerCommand("coordinates", new CoordinateCommand(), null);
         registerCommand("project", new ProjectCommand(), null);
         registerCommand("text_mod", new TextModCommand(), null);
+
+        // Register listeners
+        getServer().getPluginManager().registerEvents(new PlayerListener(), this);
     }
 
     @Override
